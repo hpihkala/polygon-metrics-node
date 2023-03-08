@@ -15,4 +15,7 @@
   },
   "include": ["src/**/*"],
   "exclude": ["test/**/*.test.ts"],
+  "ts-node": {
+    "files": true
+  },
 }
