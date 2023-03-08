@@ -1,3 +1,1 @@
-declare module 'parse-prometheus-test-format' {
-
-}
+declare module 'parse-prometheus-text-format';
