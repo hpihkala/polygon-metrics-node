@@ -50,7 +50,8 @@ Additionally, you **must** pass **one or more** of the following. Only the endpo
 
 Optional configuration and corresponding default values:
 
-- `POLL_INTERVAL_SECONDS` - How often to read and publish the metrics, in seconds. Default: `60`
+- `POLL_INTERVAL_SECONDS` - How often to read and publish the metrics, in seconds. Default: `60` seconds
+- `REQUEST_TIMEOUT_SECONDS` - How soon to timeout if the endpoint doesn't respond. Default: `10` seconds
 
 ## Data format and content
 

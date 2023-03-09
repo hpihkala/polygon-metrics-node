@@ -1,5 +1,5 @@
 import { StreamrClient } from 'streamr-client'
-import fetch from 'node-fetch'
+import axios from 'axios'
 import parsePrometheusTextFormat from 'parse-prometheus-text-format'
 
 import { MetricsMessage, Measurable, ParsedPrometheusMessage } from './types/MessageTypes'
@@ -50,6 +50,7 @@ if (!Object.keys(config).find(configName => config[configName].url && config[con
 
 // Default poll interval 60 seconds
 const pollIntervalSeconds = process.env.POLL_INTERVAL_SECONDS ? parseInt(process.env.POLL_INTERVAL_SECONDS) : 60
+const requestTimeoutSeconds = process.env.REQUEST_TIMEOUT_SECONDS ? parseInt(process.env.REQUEST_TIMEOUT_SECONDS) : 10
 
 const streamr = new StreamrClient({
 	auth: {
@@ -62,6 +63,7 @@ const streamr = new StreamrClient({
 	const address = await streamr.getAddress()
 	console.log(`Metrics node configured with address: ${address}`)
 	console.log(`Poll interval is ${pollIntervalSeconds} seconds`)
+	console.log(`Request timeout is ${requestTimeoutSeconds} seconds`)
 
 	const poll = async () => {
 		// Poll metrics data from each of the configured endpoints
@@ -71,11 +73,12 @@ const streamr = new StreamrClient({
 				if (url && streamId) {
 					// Fetch from the Prometheus endpoint
 					console.log(`${configName}: Fetching from ${url}`)					
-					const response = await fetch(url)
-					const body = await response.text()
+					const response = await axios.get(url, {
+						timeout: requestTimeoutSeconds * 1000,
+					})
 
 					// Parse the Prometheus text format to an object format
-					const parsedPrometheusFormat: ParsedPrometheusMessage[] = parsePrometheusTextFormat(body)
+					const parsedPrometheusFormat: ParsedPrometheusMessage[] = parsePrometheusTextFormat(response.data)
 
 					const message: MetricsMessage = {
 						version: 1,
