@@ -18,9 +18,9 @@ The data is being published to the following four stream ids, one per each node 
 - `polygon-validators.eth/sentry/heimdall` ([preview in browser](https://streamr.network/core/streams/polygon-validators.eth%2Fsentry%2Fheimdall/preview))
 
 Builders seeking to use the data can easily subscribe to the above streams using one of the following:
-- [JS client library](https://www.npmjs.com/package/streamr-client),
-- [Broker node](https://docs.streamr.network/node-runners/run-a-node),
-- [Command-line interface (CLI)](https://docs.streamr.network/usage/cli-tool/).
+- [JS client library](https://www.npmjs.com/package/streamr-client)
+- [Broker node](https://docs.streamr.network/node-runners/run-a-node)
+- [Command-line interface (CLI)](https://docs.streamr.network/usage/cli-tool/)
 
 Example using the CLI tool:
 
