@@ -83,16 +83,18 @@ const streamr = new StreamrClient({
 						metrics: {}
 					}
 					parsedPrometheusFormat.forEach((prometheusEntry) => {
-						const message: Measurable = {
+						const measurable: Measurable = {
 							type: prometheusEntry.type,
 							metrics: prometheusEntry.metrics,
 							help: prometheusEntry.help
 						}
 						
 						// Don't include empty help messages
-						if (message.help === '') {
-							delete message.help
+						if (measurable.help === '') {
+							delete measurable.help
 						}
+
+						message.metrics[prometheusEntry.name] = measurable
 					})
 
 					console.log(`${configName}: Publishing to ${streamId}`)
