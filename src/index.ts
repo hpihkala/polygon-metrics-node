@@ -98,9 +98,8 @@ const streamr = new StreamrClient({
 					})
 
 					console.log(`${configName}: Publishing to ${streamId}`)
-					console.log(JSON.stringify(message, null, 2))
-
-					// await streamr.publish(streamId, message)
+					// console.log(JSON.stringify(message, null, 2))
+					await streamr.publish(streamId, message)
 				}
 			} catch (err) {
 				console.log(err)
