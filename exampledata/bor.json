@@ -1,0 +1,4454 @@
+
+{
+  "version": 1,
+  "validator": "0xa38f3504e661D2B152ADAf197Ba5057c911C879B",
+  "metrics": {
+    "chain_account_commits_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "219815"
+        }
+      ]
+    },
+    "chain_account_commits": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "chain_account_hashes_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "219815"
+        }
+      ]
+    },
+    "chain_account_hashes": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "chain_account_reads_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "219815"
+        }
+      ]
+    },
+    "chain_account_reads": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "chain_account_updates_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "219815"
+        }
+      ]
+    },
+    "chain_account_updates": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "chain_execution_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "219815"
+        }
+      ]
+    },
+    "chain_execution": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "4.0079158e+07",
+            "0.75": "5.34305195e+07",
+            "0.95": "8.252913369999997e+07",
+            "0.99": "1.0843856501000002e+08",
+            "0.999": "5.840992762980013e+08",
+            "0.9999": "5.94117368e+08"
+          }
+        }
+      ]
+    },
+    "chain_head_block": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "40141165"
+        }
+      ]
+    },
+    "chain_head_header": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "40141165"
+        }
+      ]
+    },
+    "chain_head_receipt": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "40141165"
+        }
+      ]
+    },
+    "chain_imports": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "219986"
+        }
+      ]
+    },
+    "chain_inserts_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "219815"
+        }
+      ]
+    },
+    "chain_inserts": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "5.96413265e+07",
+            "0.75": "7.572558775e+07",
+            "0.95": "1.1603719814999999e+08",
+            "0.99": "1.5414123128000015e+08",
+            "0.999": "6.292082657730012e+08",
+            "0.9999": "6.39104419e+08"
+          }
+        }
+      ]
+    },
+    "chain_prefetch_executes_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "346"
+        }
+      ]
+    },
+    "chain_prefetch_executes": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "9.929747e+06",
+            "0.75": "1.956763675e+07",
+            "0.95": "4.12878284e+07",
+            "0.99": "6.956366157999997e+07",
+            "0.999": "1.06369283e+08",
+            "0.9999": "1.06369283e+08"
+          }
+        }
+      ]
+    },
+    "chain_prefetch_interrupts": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "6"
+        }
+      ]
+    },
+    "chain_reorg_add": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "1059"
+        }
+      ]
+    },
+    "chain_reorg_drop": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "993"
+        }
+      ]
+    },
+    "chain_reorg_executes": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "635"
+        }
+      ]
+    },
+    "chain_reorg_invalidTx": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "19"
+        }
+      ]
+    },
+    "chain_snapshot_account_reads_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "219815"
+        }
+      ]
+    },
+    "chain_snapshot_account_reads": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "chain_snapshot_commits_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "219815"
+        }
+      ]
+    },
+    "chain_snapshot_commits": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "chain_snapshot_storage_reads_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "219815"
+        }
+      ]
+    },
+    "chain_snapshot_storage_reads": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "chain_storage_commits_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "219815"
+        }
+      ]
+    },
+    "chain_storage_commits": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "chain_storage_hashes_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "219815"
+        }
+      ]
+    },
+    "chain_storage_hashes": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "chain_storage_reads_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "219815"
+        }
+      ]
+    },
+    "chain_storage_reads": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "chain_storage_updates_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "219815"
+        }
+      ]
+    },
+    "chain_storage_updates": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "chain_validation_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "219815"
+        }
+      ]
+    },
+    "chain_validation": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "1.0058685e+06",
+            "0.75": "1.40123075e+06",
+            "0.95": "2.4650287499999995e+06",
+            "0.99": "4.197667970000021e+06",
+            "0.999": "5.659551433e+06",
+            "0.9999": "5.661759e+06"
+          }
+        }
+      ]
+    },
+    "chain_write_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "219815"
+        }
+      ]
+    },
+    "chain_write": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "1.65325345e+07",
+            "0.75": "2.175179325e+07",
+            "0.95": "3.341246199999998e+07",
+            "0.99": "7.788746126000006e+07",
+            "0.999": "1.4055506656800005e+08",
+            "0.9999": "1.41020511e+08"
+          }
+        }
+      ]
+    },
+    "client_requests_checkpoint_duration_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "client_requests_checkpoint_duration": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "client_requests_checkpoint_invalid": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "client_requests_checkpoint_valid": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "client_requests_checkpointcount_duration_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "client_requests_checkpointcount_duration": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "client_requests_checkpointcount_invalid": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "client_requests_checkpointcount_valid": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "client_requests_span_duration_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "client_requests_span_duration": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "client_requests_span_invalid": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "client_requests_span_valid": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "client_requests_statesync_duration_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "client_requests_statesync_duration": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "client_requests_statesync_invalid": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "client_requests_statesync_valid": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "db_preimage_hits": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "10"
+        }
+      ]
+    },
+    "db_preimage_total": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "10"
+        }
+      ]
+    },
+    "eth_db_chaindata_ancient_read": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "eth_db_chaindata_ancient_size": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "1203802396031"
+        }
+      ]
+    },
+    "eth_db_chaindata_ancient_write": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "8771562398"
+        }
+      ]
+    },
+    "eth_db_chaindata_compact_input": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "2869274416006"
+        }
+      ]
+    },
+    "eth_db_chaindata_compact_level0": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "284"
+        }
+      ]
+    },
+    "eth_db_chaindata_compact_memory": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "1133"
+        }
+      ]
+    },
+    "eth_db_chaindata_compact_nonlevel0": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "307673"
+        }
+      ]
+    },
+    "eth_db_chaindata_compact_output": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "2985824557662"
+        }
+      ]
+    },
+    "eth_db_chaindata_compact_seek": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "eth_db_chaindata_compact_time": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "11617988557480"
+        }
+      ]
+    },
+    "eth_db_chaindata_compact_writedelay_counter": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "eth_db_chaindata_compact_writedelay_duration": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "eth_db_chaindata_disk_read": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "22167551998095"
+        }
+      ]
+    },
+    "eth_db_chaindata_disk_size": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "1822223328492"
+        }
+      ]
+    },
+    "eth_db_chaindata_disk_write": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "3136199480351"
+        }
+      ]
+    },
+    "eth_downloader_bodies_drop": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "eth_downloader_bodies_in": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "664"
+        }
+      ]
+    },
+    "eth_downloader_bodies_req_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "299"
+        }
+      ]
+    },
+    "eth_downloader_bodies_req": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "1.5740642e+07",
+            "0.75": "4.7904018e+07",
+            "0.95": "2.38461176e+08",
+            "0.99": "3.26575491e+09",
+            "0.999": "1.6766471622e+10",
+            "0.9999": "1.6766471622e+10"
+          }
+        }
+      ]
+    },
+    "eth_downloader_bodies_timeout": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "34"
+        }
+      ]
+    },
+    "eth_downloader_headers_drop": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "eth_downloader_headers_in": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "1742"
+        }
+      ]
+    },
+    "eth_downloader_headers_req_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "1276"
+        }
+      ]
+    },
+    "eth_downloader_headers_req": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "1.67900405e+07",
+            "0.75": "9.01931205e+07",
+            "0.95": "1.0174356439999999e+08",
+            "0.99": "3.841007716700009e+08",
+            "0.999": "3.433253207818003e+09",
+            "0.9999": "3.458738511e+09"
+          }
+        }
+      ]
+    },
+    "eth_downloader_headers_timeout": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "5"
+        }
+      ]
+    },
+    "eth_downloader_receipts_drop": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "eth_downloader_receipts_in": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "eth_downloader_receipts_req_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "eth_downloader_receipts_req": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "eth_downloader_receipts_timeout": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "eth_downloader_states_drop": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "eth_downloader_states_in": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "eth_downloader_throttle": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "eth_fetcher_block_announces_dos": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "eth_fetcher_block_announces_drop": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "1120"
+        }
+      ]
+    },
+    "eth_fetcher_block_announces_in": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "1464032"
+        }
+      ]
+    },
+    "eth_fetcher_block_announces_out_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "219384"
+        }
+      ]
+    },
+    "eth_fetcher_block_announces_out": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "6.3321437e+07",
+            "0.75": "8.00740505e+07",
+            "0.95": "1.2301082564999999e+08",
+            "0.99": "1.7143489712000015e+08",
+            "0.999": "1.1133077384960017e+09",
+            "0.9999": "1.127405328e+09"
+          }
+        }
+      ]
+    },
+    "eth_fetcher_block_bodies": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "118841"
+        }
+      ]
+    },
+    "eth_fetcher_block_broadcasts_dos": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "eth_fetcher_block_broadcasts_drop": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "535"
+        }
+      ]
+    },
+    "eth_fetcher_block_broadcasts_in": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "122866"
+        }
+      ]
+    },
+    "eth_fetcher_block_broadcasts_out_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "219384"
+        }
+      ]
+    },
+    "eth_fetcher_block_broadcasts_out": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "1.90086e+06",
+            "0.75": "2.383041e+06",
+            "0.95": "3.6813094e+06",
+            "0.99": "4.951061790000001e+06",
+            "0.999": "9.88895054328003e+08",
+            "0.9999": "1.01275496e+09"
+          }
+        }
+      ]
+    },
+    "eth_fetcher_block_filter_bodies_in": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "118841"
+        }
+      ]
+    },
+    "eth_fetcher_block_filter_bodies_out": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "3497"
+        }
+      ]
+    },
+    "eth_fetcher_block_filter_headers_in": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "128222"
+        }
+      ]
+    },
+    "eth_fetcher_block_filter_headers_out": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "2060"
+        }
+      ]
+    },
+    "eth_fetcher_block_headers": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "128353"
+        }
+      ]
+    },
+    "eth_fetcher_transaction_announces_dos": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "70327"
+        }
+      ]
+    },
+    "eth_fetcher_transaction_announces_in": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "74083642"
+        }
+      ]
+    },
+    "eth_fetcher_transaction_announces_known": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "7853923"
+        }
+      ]
+    },
+    "eth_fetcher_transaction_announces_underpriced": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "854700"
+        }
+      ]
+    },
+    "eth_fetcher_transaction_broadcasts_in": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "6628296"
+        }
+      ]
+    },
+    "eth_fetcher_transaction_broadcasts_known": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "1526671"
+        }
+      ]
+    },
+    "eth_fetcher_transaction_broadcasts_otherreject": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "191049"
+        }
+      ]
+    },
+    "eth_fetcher_transaction_broadcasts_underpriced": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "209628"
+        }
+      ]
+    },
+    "eth_fetcher_transaction_fetching_hashes": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "4"
+        }
+      ]
+    },
+    "eth_fetcher_transaction_fetching_peers": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "2"
+        }
+      ]
+    },
+    "eth_fetcher_transaction_queueing_hashes": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "eth_fetcher_transaction_queueing_peers": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "3"
+        }
+      ]
+    },
+    "eth_fetcher_transaction_replies_in": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "12990362"
+        }
+      ]
+    },
+    "eth_fetcher_transaction_replies_known": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "325035"
+        }
+      ]
+    },
+    "eth_fetcher_transaction_replies_otherreject": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "1349702"
+        }
+      ]
+    },
+    "eth_fetcher_transaction_replies_underpriced": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "676323"
+        }
+      ]
+    },
+    "eth_fetcher_transaction_request_done": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "12990362"
+        }
+      ]
+    },
+    "eth_fetcher_transaction_request_fail": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "256"
+        }
+      ]
+    },
+    "eth_fetcher_transaction_request_out": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "13457293"
+        }
+      ]
+    },
+    "eth_fetcher_transaction_request_timeout": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "36689"
+        }
+      ]
+    },
+    "eth_fetcher_transaction_waiting_hashes": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "14"
+        }
+      ]
+    },
+    "eth_fetcher_transaction_waiting_peers": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "5"
+        }
+      ]
+    },
+    "les_client_req_rtt_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_client_req_rtt": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "les_client_req_sendDelay_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_client_req_sendDelay": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "les_client_serverPool_connected": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_client_serverPool_dialed": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_client_serverPool_selectable": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_client_serverPool_sessionValue": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_client_serverPool_timeout": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_client_serverPool_totalValue": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_connection_duration_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_connection_duration": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "les_connection_server": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_in_packets_body": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_in_packets_code": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_in_packets_header": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_in_packets_helperTrie": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_in_packets_proof": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_in_packets_receipt": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_in_packets_total": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_in_packets_txStatus": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_in_packets_txs": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_in_traffic_body": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_in_traffic_code": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_in_traffic_header": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_in_traffic_helperTrie": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_in_traffic_proof": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_in_traffic_receipt": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_in_traffic_total": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_in_traffic_txStatus": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_in_traffic_txs": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_out_packets_body": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_out_packets_code": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_out_packets_header": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_out_packets_helperTrie": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_out_packets_proof": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_out_packets_receipt": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_out_packets_total": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_out_packets_txStatus": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_out_packets_txs": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_out_traffic_body": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_out_traffic_code": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_out_traffic_header": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_out_traffic_helperTrie": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_out_traffic_proof": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_out_traffic_receipt": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_out_traffic_total": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_out_traffic_txStatus": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_out_traffic_txs": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_serve_body_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_serve_body": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "les_misc_serve_code_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_serve_code": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "les_misc_serve_header_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_serve_header": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "les_misc_serve_helperTrie_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_serve_helperTrie": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "les_misc_serve_proof_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_serve_proof": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "les_misc_serve_receipt_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_serve_receipt": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "les_misc_serve_txStatus_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_serve_txStatus": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "les_misc_serve_txs_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_misc_serve_txs": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "les_server_blockProcessingTime_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_server_blockProcessingTime": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "les_server_clientEvent_error": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_server_clientEvent_freeze": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_server_globalFactor": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_server_recentRequestEstimated": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_server_recentRequestServed": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_server_req_avgEstimatedTime": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_server_req_avgServedTime": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_server_req_estimatedTime_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_server_req_estimatedTime": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "les_server_req_relative_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_server_req_relative": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "les_server_req_relative_body_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_server_req_relative_body": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "les_server_req_relative_code_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_server_req_relative_code": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "les_server_req_relative_header_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_server_req_relative_header": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "les_server_req_relative_helperTrie_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_server_req_relative_helperTrie": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "les_server_req_relative_proof_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_server_req_relative_proof": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "les_server_req_relative_receipt_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_server_req_relative_receipt": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "les_server_req_relative_txStatus_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_server_req_relative_txStatus": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "les_server_req_relative_txs_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_server_req_relative_txs": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "les_server_req_servedTime_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_server_req_servedTime": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "les_server_servingQueue_queued": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_server_servingQueue_served": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_server_totalCapacity": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "les_server_totalRecharge": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "p2p_dials": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "8533"
+        }
+      ]
+    },
+    "p2p_egress": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "128484321755"
+        }
+      ]
+    },
+    "p2p_egress_eth_66_0x00": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "833340"
+        }
+      ]
+    },
+    "p2p_egress_eth_66_0x00_packets": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "9690"
+        }
+      ]
+    },
+    "p2p_egress_eth_66_0x01": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "335592768"
+        }
+      ]
+    },
+    "p2p_egress_eth_66_0x01_packets": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "7990304"
+        }
+      ]
+    },
+    "p2p_egress_eth_66_0x02": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "32594397428"
+        }
+      ]
+    },
+    "p2p_egress_eth_66_0x02_packets": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "78741025"
+        }
+      ]
+    },
+    "p2p_egress_eth_66_0x03": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "6321635"
+        }
+      ]
+    },
+    "p2p_egress_eth_66_0x03_packets": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "129632"
+        }
+      ]
+    },
+    "p2p_egress_eth_66_0x04": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "5638437565"
+        }
+      ]
+    },
+    "p2p_egress_eth_66_0x04_packets": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "161219"
+        }
+      ]
+    },
+    "p2p_egress_eth_66_0x05": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "5514679"
+        }
+      ]
+    },
+    "p2p_egress_eth_66_0x05_packets": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "119086"
+        }
+      ]
+    },
+    "p2p_egress_eth_66_0x06": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "3629660308"
+        }
+      ]
+    },
+    "p2p_egress_eth_66_0x06_packets": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "72683"
+        }
+      ]
+    },
+    "p2p_egress_eth_66_0x07": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "32394264601"
+        }
+      ]
+    },
+    "p2p_egress_eth_66_0x07_packets": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "1367800"
+        }
+      ]
+    },
+    "p2p_egress_eth_66_0x08": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "21127187321"
+        }
+      ]
+    },
+    "p2p_egress_eth_66_0x08_packets": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "340832048"
+        }
+      ]
+    },
+    "p2p_egress_eth_66_0x09": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "510511969"
+        }
+      ]
+    },
+    "p2p_egress_eth_66_0x09_packets": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "4330899"
+        }
+      ]
+    },
+    "p2p_egress_eth_66_0x0a": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "2255864479"
+        }
+      ]
+    },
+    "p2p_egress_eth_66_0x0a_packets": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "82450441"
+        }
+      ]
+    },
+    "p2p_egress_eth_66_0x10": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "266267449"
+        }
+      ]
+    },
+    "p2p_egress_eth_66_0x10_packets": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "227994"
+        }
+      ]
+    },
+    "p2p_handle_eth_66_0x01_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "47"
+        }
+      ]
+    },
+    "p2p_handle_eth_66_0x01": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "143",
+            "0.75": "200",
+            "0.95": "394.1999999999994",
+            "0.99": "462",
+            "0.999": "462",
+            "0.9999": "462"
+          }
+        }
+      ]
+    },
+    "p2p_handle_eth_66_0x02_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "79"
+        }
+      ]
+    },
+    "p2p_handle_eth_66_0x02": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "497",
+            "0.75": "849",
+            "0.95": "1544",
+            "0.99": "71355",
+            "0.999": "71355",
+            "0.9999": "71355"
+          }
+        }
+      ]
+    },
+    "p2p_handle_eth_66_0x03_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "1"
+        }
+      ]
+    },
+    "p2p_handle_eth_66_0x03": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "160",
+            "0.75": "160",
+            "0.95": "160",
+            "0.99": "160",
+            "0.999": "160",
+            "0.9999": "160"
+          }
+        }
+      ]
+    },
+    "p2p_handle_eth_66_0x04_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "3"
+        }
+      ]
+    },
+    "p2p_handle_eth_66_0x04": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "165",
+            "0.75": "182",
+            "0.95": "182",
+            "0.99": "182",
+            "0.999": "182",
+            "0.9999": "182"
+          }
+        }
+      ]
+    },
+    "p2p_handle_eth_66_0x05_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "1"
+        }
+      ]
+    },
+    "p2p_handle_eth_66_0x05": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "69",
+            "0.75": "69",
+            "0.95": "69",
+            "0.99": "69",
+            "0.999": "69",
+            "0.9999": "69"
+          }
+        }
+      ]
+    },
+    "p2p_handle_eth_66_0x06_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "2"
+        }
+      ]
+    },
+    "p2p_handle_eth_66_0x06": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "1624",
+            "0.75": "1780",
+            "0.95": "1780",
+            "0.99": "1780",
+            "0.999": "1780",
+            "0.9999": "1780"
+          }
+        }
+      ]
+    },
+    "p2p_handle_eth_66_0x07_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "2"
+        }
+      ]
+    },
+    "p2p_handle_eth_66_0x07": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "1238",
+            "0.75": "1452",
+            "0.95": "1452",
+            "0.99": "1452",
+            "0.999": "1452",
+            "0.9999": "1452"
+          }
+        }
+      ]
+    },
+    "p2p_handle_eth_66_0x08_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "703"
+        }
+      ]
+    },
+    "p2p_handle_eth_66_0x08": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "31",
+            "0.75": "36",
+            "0.95": "54.799999999999955",
+            "0.99": "93.64000000000033",
+            "0.999": "227",
+            "0.9999": "227"
+          }
+        }
+      ]
+    },
+    "p2p_handle_eth_66_0x09_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "1555"
+        }
+      ]
+    },
+    "p2p_handle_eth_66_0x09": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "63.5",
+            "0.75": "95",
+            "0.95": "118",
+            "0.99": "177.10000000000036",
+            "0.999": "241.68100000000004",
+            "0.9999": "242"
+          }
+        }
+      ]
+    },
+    "p2p_handle_eth_66_0x0a_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "96"
+        }
+      ]
+    },
+    "p2p_handle_eth_66_0x0a": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "880.5",
+            "0.75": "1566.75",
+            "0.95": "9077.299999999785",
+            "0.99": "77818",
+            "0.999": "77818",
+            "0.9999": "77818"
+          }
+        }
+      ]
+    },
+    "p2p_handle_eth_66_0x0f_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "5"
+        }
+      ]
+    },
+    "p2p_handle_eth_66_0x0f": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "615",
+            "0.75": "727.5",
+            "0.95": "807",
+            "0.99": "807",
+            "0.999": "807",
+            "0.9999": "807"
+          }
+        }
+      ]
+    },
+    "p2p_ingress": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "24931994706"
+        }
+      ]
+    },
+    "p2p_ingress_eth_66_0x00": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "615612"
+        }
+      ]
+    },
+    "p2p_ingress_eth_66_0x00_packets": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "7466"
+        }
+      ]
+    },
+    "p2p_ingress_eth_66_0x01": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "68128914"
+        }
+      ]
+    },
+    "p2p_ingress_eth_66_0x01_packets": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "1622117"
+        }
+      ]
+    },
+    "p2p_ingress_eth_66_0x02": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "2114751887"
+        }
+      ]
+    },
+    "p2p_ingress_eth_66_0x02_packets": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "5366660"
+        }
+      ]
+    },
+    "p2p_ingress_eth_66_0x03": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "7261223"
+        }
+      ]
+    },
+    "p2p_ingress_eth_66_0x03_packets": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "161232"
+        }
+      ]
+    },
+    "p2p_ingress_eth_66_0x04": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "81918610"
+        }
+      ]
+    },
+    "p2p_ingress_eth_66_0x04_packets": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "129624"
+        }
+      ]
+    },
+    "p2p_ingress_eth_66_0x05": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "16326587"
+        }
+      ]
+    },
+    "p2p_ingress_eth_66_0x05_packets": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "72687"
+        }
+      ]
+    },
+    "p2p_ingress_eth_66_0x06": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "2888190992"
+        }
+      ]
+    },
+    "p2p_ingress_eth_66_0x06_packets": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "119043"
+        }
+      ]
+    },
+    "p2p_ingress_eth_66_0x07": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "2915785017"
+        }
+      ]
+    },
+    "p2p_ingress_eth_66_0x07_packets": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "122867"
+        }
+      ]
+    },
+    "p2p_ingress_eth_66_0x08": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "2632757510"
+        }
+      ]
+    },
+    "p2p_ingress_eth_66_0x08_packets": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "59164722"
+        }
+      ]
+    },
+    "p2p_ingress_eth_66_0x09": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "1218799832"
+        }
+      ]
+    },
+    "p2p_ingress_eth_66_0x09_packets": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "82450454"
+        }
+      ]
+    },
+    "p2p_ingress_eth_66_0x0a": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "4257720185"
+        }
+      ]
+    },
+    "p2p_ingress_eth_66_0x0a_packets": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "4330792"
+        }
+      ]
+    },
+    "p2p_ingress_eth_66_0x0f": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "10486922"
+        }
+      ]
+    },
+    "p2p_ingress_eth_66_0x0f_packets": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "227994"
+        }
+      ]
+    },
+    "p2p_lost_eth_66_0x03": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "9"
+        }
+      ]
+    },
+    "p2p_lost_eth_66_0x05": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "43"
+        }
+      ]
+    },
+    "p2p_lost_eth_66_0x09": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "107"
+        }
+      ]
+    },
+    "p2p_peers": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "50"
+        }
+      ]
+    },
+    "p2p_serves": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "255058"
+        }
+      ]
+    },
+    "p2p_tracked_eth_66_0x03": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "p2p_tracked_eth_66_0x05": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "p2p_tracked_eth_66_0x09": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "2"
+        }
+      ]
+    },
+    "p2p_wait_eth_66_0x03_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "3"
+        }
+      ]
+    },
+    "p2p_wait_eth_66_0x03": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "81693",
+            "0.75": "81819",
+            "0.95": "81819",
+            "0.99": "81819",
+            "0.999": "81819",
+            "0.9999": "81819"
+          }
+        }
+      ]
+    },
+    "p2p_wait_eth_66_0x05_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "2"
+        }
+      ]
+    },
+    "p2p_wait_eth_66_0x05": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "147297",
+            "0.75": "292229",
+            "0.95": "292229",
+            "0.99": "292229",
+            "0.999": "292229",
+            "0.9999": "292229"
+          }
+        }
+      ]
+    },
+    "p2p_wait_eth_66_0x09_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "96"
+        }
+      ]
+    },
+    "p2p_wait_eth_66_0x09": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "86219",
+            "0.75": "224930",
+            "0.95": "236315.8",
+            "0.99": "268801",
+            "0.999": "268801",
+            "0.9999": "268801"
+          }
+        }
+      ]
+    },
+    "rpc_duration_admin_datadir_success_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "1"
+        }
+      ]
+    },
+    "rpc_duration_admin_datadir_success": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "17115",
+            "0.75": "17115",
+            "0.95": "17115",
+            "0.99": "17115",
+            "0.999": "17115",
+            "0.9999": "17115"
+          }
+        }
+      ]
+    },
+    "rpc_duration_all_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "6877"
+        }
+      ]
+    },
+    "rpc_duration_all": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "494126",
+            "0.75": "741023.5",
+            "0.95": "1.3437768999999992e+06",
+            "0.99": "1.4916856760000044e+07",
+            "0.999": "4.804400093000001e+07",
+            "0.9999": "4.8071662e+07"
+          }
+        }
+      ]
+    },
+    "rpc_duration_eth_blockNumber_success_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "2"
+        }
+      ]
+    },
+    "rpc_duration_eth_blockNumber_success": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "19652.5",
+            "0.75": "29201",
+            "0.95": "29201",
+            "0.99": "29201",
+            "0.999": "29201",
+            "0.9999": "29201"
+          }
+        }
+      ]
+    },
+    "rpc_duration_eth_call_success_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "4730"
+        }
+      ]
+    },
+    "rpc_duration_eth_call_success": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "462698.5",
+            "0.75": "586421.25",
+            "0.95": "783686.5",
+            "0.99": "1.1482223000000014e+06",
+            "0.999": "5.331769062000014e+06",
+            "0.9999": "5.439612e+06"
+          }
+        }
+      ]
+    },
+    "rpc_duration_eth_coinbase_failure_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "1"
+        }
+      ]
+    },
+    "rpc_duration_eth_coinbase_failure": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "16883",
+            "0.75": "16883",
+            "0.95": "16883",
+            "0.99": "16883",
+            "0.999": "16883",
+            "0.9999": "16883"
+          }
+        }
+      ]
+    },
+    "rpc_duration_eth_getBlockByNumber_success_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "1908"
+        }
+      ]
+    },
+    "rpc_duration_eth_getBlockByNumber_success": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "921626",
+            "0.75": "1.1282005e+06",
+            "0.95": "1.4269444499999997e+06",
+            "0.99": "1.7727478700000006e+06",
+            "0.999": "3.021831697000003e+06",
+            "0.9999": "3.045464e+06"
+          }
+        }
+      ]
+    },
+    "rpc_duration_eth_getRootHash_success_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "231"
+        }
+      ]
+    },
+    "rpc_duration_eth_getRootHash_success": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "1.2654442e+07",
+            "0.75": "2.3717979e+07",
+            "0.95": "4.565049039999996e+07",
+            "0.99": "5.561199932000003e+07",
+            "0.999": "5.8151998e+07",
+            "0.9999": "5.8151998e+07"
+          }
+        }
+      ]
+    },
+    "rpc_duration_eth_syncing_success_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "1"
+        }
+      ]
+    },
+    "rpc_duration_eth_syncing_success": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "141767",
+            "0.75": "141767",
+            "0.95": "141767",
+            "0.99": "141767",
+            "0.999": "141767",
+            "0.9999": "141767"
+          }
+        }
+      ]
+    },
+    "rpc_duration_rpc_modules_success_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "2"
+        }
+      ]
+    },
+    "rpc_duration_rpc_modules_success": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "24607.5",
+            "0.75": "41166",
+            "0.95": "41166",
+            "0.99": "41166",
+            "0.999": "41166",
+            "0.9999": "41166"
+          }
+        }
+      ]
+    },
+    "rpc_duration_web3_clientVersion_success_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "1"
+        }
+      ]
+    },
+    "rpc_duration_web3_clientVersion_success": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "24706",
+            "0.75": "24706",
+            "0.95": "24706",
+            "0.99": "24706",
+            "0.999": "24706",
+            "0.9999": "24706"
+          }
+        }
+      ]
+    },
+    "rpc_failure": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "1"
+        }
+      ]
+    },
+    "rpc_requests": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "6877"
+        }
+      ]
+    },
+    "rpc_success": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "6876"
+        }
+      ]
+    },
+    "state_commit_account": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "state_commit_storage": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "state_delete_account": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "state_delete_storage": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "state_snapshot_bloom_account_falsehit": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "18344984"
+        }
+      ]
+    },
+    "state_snapshot_bloom_account_miss": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "1113745220"
+        }
+      ]
+    },
+    "state_snapshot_bloom_account_truehit": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "114508110"
+        }
+      ]
+    },
+    "state_snapshot_bloom_error": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0.008211933228771269"
+        }
+      ]
+    },
+    "state_snapshot_bloom_index_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "4"
+        }
+      ]
+    },
+    "state_snapshot_bloom_index": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.50": "47499",
+            "0.95": "116059",
+            "0.99": "116059"
+          }
+        }
+      ]
+    },
+    "state_snapshot_bloom_storage_falsehit": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "13250319"
+        }
+      ]
+    },
+    "state_snapshot_bloom_storage_miss": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "807588977"
+        }
+      ]
+    },
+    "state_snapshot_bloom_storage_truehit": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "108028600"
+        }
+      ]
+    },
+    "state_snapshot_clean_account_hit": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "1125582203"
+        }
+      ]
+    },
+    "state_snapshot_clean_account_inex": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "1224536"
+        }
+      ]
+    },
+    "state_snapshot_clean_account_miss": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "6505472"
+        }
+      ]
+    },
+    "state_snapshot_clean_account_read": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "16227753951"
+        }
+      ]
+    },
+    "state_snapshot_clean_account_write": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "414387193"
+        }
+      ]
+    },
+    "state_snapshot_clean_storage_hit": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "670274558"
+        }
+      ]
+    },
+    "state_snapshot_clean_storage_inex": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "73108249"
+        }
+      ]
+    },
+    "state_snapshot_clean_storage_miss": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "150555656"
+        }
+      ]
+    },
+    "state_snapshot_clean_storage_read": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "4875727911"
+        }
+      ]
+    },
+    "state_snapshot_clean_storage_write": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "1234962027"
+        }
+      ]
+    },
+    "state_snapshot_dirty_account_hit": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "114508110"
+        }
+      ]
+    },
+    "state_snapshot_dirty_account_hit_depth_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "114509344"
+        }
+      ]
+    },
+    "state_snapshot_dirty_account_hit_depth": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "11",
+            "0.75": "41.75",
+            "0.95": "124",
+            "0.99": "128",
+            "0.999": "128",
+            "0.9999": "128"
+          }
+        }
+      ]
+    },
+    "state_snapshot_dirty_account_inex": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "813427"
+        }
+      ]
+    },
+    "state_snapshot_dirty_account_miss": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "1132087675"
+        }
+      ]
+    },
+    "state_snapshot_dirty_account_read": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "4098846999"
+        }
+      ]
+    },
+    "state_snapshot_dirty_account_write": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "1369266747"
+        }
+      ]
+    },
+    "state_snapshot_dirty_storage_hit": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "108028600"
+        }
+      ]
+    },
+    "state_snapshot_dirty_storage_hit_depth_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "108029544"
+        }
+      ]
+    },
+    "state_snapshot_dirty_storage_hit_depth": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "9",
+            "0.75": "38",
+            "0.95": "128",
+            "0.99": "128",
+            "0.999": "128",
+            "0.9999": "128"
+          }
+        }
+      ]
+    },
+    "state_snapshot_dirty_storage_inex": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "5168151"
+        }
+      ]
+    },
+    "state_snapshot_dirty_storage_miss": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "820830214"
+        }
+      ]
+    },
+    "state_snapshot_dirty_storage_read": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "1434063457"
+        }
+      ]
+    },
+    "state_snapshot_dirty_storage_write": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "1048193663"
+        }
+      ]
+    },
+    "state_snapshot_flush_account_item": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "9553741"
+        }
+      ]
+    },
+    "state_snapshot_flush_account_size": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "290013085"
+        }
+      ]
+    },
+    "state_snapshot_flush_storage_item": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "70964280"
+        }
+      ]
+    },
+    "state_snapshot_flush_storage_size": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "597304192"
+        }
+      ]
+    },
+    "state_snapshot_generation_account_generated": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "state_snapshot_generation_account_missall": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "state_snapshot_generation_account_recovered": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "state_snapshot_generation_account_wiped": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "state_snapshot_generation_duration_account_prove": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "state_snapshot_generation_duration_account_snapread": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "state_snapshot_generation_duration_account_trieread": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "state_snapshot_generation_duration_account_write": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "state_snapshot_generation_duration_storage_prove": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "state_snapshot_generation_duration_storage_snapread": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "state_snapshot_generation_duration_storage_trieread": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "state_snapshot_generation_duration_storage_write": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "state_snapshot_generation_proof_failure": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "state_snapshot_generation_proof_success": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "state_snapshot_generation_storage_generated": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "state_snapshot_generation_storage_missall": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "state_snapshot_generation_storage_recovered": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "state_snapshot_generation_storage_wiped": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "state_update_account": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "state_update_storage": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "system_cpu_goroutines": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "661"
+        }
+      ]
+    },
+    "system_cpu_procload": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "51"
+        }
+      ]
+    },
+    "system_cpu_sysload": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "84"
+        }
+      ]
+    },
+    "system_cpu_syswait": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "1"
+        }
+      ]
+    },
+    "system_cpu_threads": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "43"
+        }
+      ]
+    },
+    "system_disk_readbytes": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "22205407913232"
+        }
+      ]
+    },
+    "system_disk_readcount": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "2591135360"
+        }
+      ]
+    },
+    "system_disk_readdata": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "22205207825371"
+        }
+      ]
+    },
+    "system_disk_writebytes": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "3299271859221"
+        }
+      ]
+    },
+    "system_disk_writecount": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "1254917198"
+        }
+      ]
+    },
+    "system_disk_writedata": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "3299269084799"
+        }
+      ]
+    },
+    "system_memory_allocs": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "363540682139"
+        }
+      ]
+    },
+    "system_memory_frees": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "363513120687"
+        }
+      ]
+    },
+    "system_memory_held": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "5657288704"
+        }
+      ]
+    },
+    "system_memory_pauses": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "1956595129"
+        }
+      ]
+    },
+    "system_memory_used": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "3362545336"
+        }
+      ]
+    },
+    "trie_memcache_clean_hit": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "447032361"
+        }
+      ]
+    },
+    "trie_memcache_clean_miss": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "239893396"
+        }
+      ]
+    },
+    "trie_memcache_clean_read": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "141105427776"
+        }
+      ]
+    },
+    "trie_memcache_clean_write": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "75112049203"
+        }
+      ]
+    },
+    "trie_memcache_commit_nodes": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "221273"
+        }
+      ]
+    },
+    "trie_memcache_commit_size": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "78479252"
+        }
+      ]
+    },
+    "trie_memcache_dirty_hit": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "1151928973"
+        }
+      ]
+    },
+    "trie_memcache_dirty_miss": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "239893397"
+        }
+      ]
+    },
+    "trie_memcache_dirty_read": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "469244516770"
+        }
+      ]
+    },
+    "trie_memcache_dirty_write": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "250064889363"
+        }
+      ]
+    },
+    "trie_memcache_flush_nodes": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "329898364"
+        }
+      ]
+    },
+    "trie_memcache_flush_size": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "111084510881"
+        }
+      ]
+    },
+    "trie_memcache_flush_time_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "4"
+        }
+      ]
+    },
+    "trie_memcache_flush_time": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.50": "2929163",
+            "0.95": "4723597",
+            "0.99": "4723597"
+          }
+        }
+      ]
+    },
+    "trie_memcache_gc_nodes": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "365442420"
+        }
+      ]
+    },
+    "trie_memcache_gc_size": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "160964991914"
+        }
+      ]
+    },
+    "trie_memcache_gc_time_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "4"
+        }
+      ]
+    },
+    "trie_memcache_gc_time": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.50": "4386212",
+            "0.95": "7523428",
+            "0.99": "7523428"
+          }
+        }
+      ]
+    },
+    "trie_prefetch_chain_account_dup": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "44661153"
+        }
+      ]
+    },
+    "trie_prefetch_chain_account_load": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "31687446"
+        }
+      ]
+    },
+    "trie_prefetch_chain_account_skip": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "28655"
+        }
+      ]
+    },
+    "trie_prefetch_chain_account_waste": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "trie_prefetch_chain_deliverymiss": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "455454"
+        }
+      ]
+    },
+    "trie_prefetch_chain_storage_dup": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "4395320"
+        }
+      ]
+    },
+    "trie_prefetch_chain_storage_load": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "101678484"
+        }
+      ]
+    },
+    "trie_prefetch_chain_storage_skip": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "2893222"
+        }
+      ]
+    },
+    "trie_prefetch_chain_storage_waste": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "60104"
+        }
+      ]
+    },
+    "trie_prefetch_miner_account_dup": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "77952291"
+        }
+      ]
+    },
+    "trie_prefetch_miner_account_load": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "49149119"
+        }
+      ]
+    },
+    "trie_prefetch_miner_account_skip": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "trie_prefetch_miner_account_waste": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "49149119"
+        }
+      ]
+    },
+    "trie_prefetch_miner_deliverymiss": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "954"
+        }
+      ]
+    },
+    "trie_prefetch_miner_storage_dup": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "8188953"
+        }
+      ]
+    },
+    "trie_prefetch_miner_storage_load": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "167659159"
+        }
+      ]
+    },
+    "trie_prefetch_miner_storage_skip": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "12234"
+        }
+      ]
+    },
+    "trie_prefetch_miner_storage_waste": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "167659159"
+        }
+      ]
+    },
+    "txpool_dropbetweenreorg_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "8886079"
+        }
+      ]
+    },
+    "txpool_dropbetweenreorg": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "0",
+            "0.75": "0",
+            "0.95": "0",
+            "0.99": "0",
+            "0.999": "0",
+            "0.9999": "0"
+          }
+        }
+      ]
+    },
+    "txpool_invalid": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "2222025"
+        }
+      ]
+    },
+    "txpool_known": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "1851706"
+        }
+      ]
+    },
+    "txpool_local": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "txpool_overflowed": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "txpool_pending": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "26395"
+        }
+      ]
+    },
+    "txpool_pending_discard": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "205242"
+        }
+      ]
+    },
+    "txpool_pending_nofunds": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "31644"
+        }
+      ]
+    },
+    "txpool_pending_ratelimit": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "txpool_pending_replace": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "520202"
+        }
+      ]
+    },
+    "txpool_queued": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "54"
+        }
+      ]
+    },
+    "txpool_queued_discard": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "531"
+        }
+      ]
+    },
+    "txpool_queued_eviction": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "142398"
+        }
+      ]
+    },
+    "txpool_queued_nofunds": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "1699"
+        }
+      ]
+    },
+    "txpool_queued_ratelimit": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "20962"
+        }
+      ]
+    },
+    "txpool_queued_replace": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "1333"
+        }
+      ]
+    },
+    "txpool_reheap_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "201822"
+        }
+      ]
+    },
+    "txpool_reheap": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "5.5583864e+07",
+            "0.75": "5.659461625e+07",
+            "0.95": "6.840477364999999e+07",
+            "0.99": "9.088412010000034e+07",
+            "0.999": "2.5676633577200004e+08",
+            "0.9999": "2.57113922e+08"
+          }
+        }
+      ]
+    },
+    "txpool_reorgtime_count": {
+      "type": "COUNTER",
+      "metrics": [
+        {
+          "value": "8886079"
+        }
+      ]
+    },
+    "txpool_reorgtime": {
+      "type": "SUMMARY",
+      "metrics": [
+        {
+          "quantiles": {
+            "0.5": "1.7963225e+06",
+            "0.75": "2.6420565e+06",
+            "0.95": "5.31808845e+06",
+            "0.99": "9.403244809000002e+07",
+            "0.999": "2.3049176028600046e+08",
+            "0.9999": "2.34117058e+08"
+          }
+        }
+      ]
+    },
+    "txpool_slots": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "26452"
+        }
+      ]
+    },
+    "txpool_throttle": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "txpool_underpriced": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "txpool_valid": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "14613164"
+        }
+      ]
+    },
+    "vflux_server_active_capacity": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "vflux_server_active_count": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "vflux_server_capQueryNonZero": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "vflux_server_capQueryZero": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "vflux_server_clientEvent_activated": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "vflux_server_clientEvent_connected": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "vflux_server_clientEvent_deactivated": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "vflux_server_clientEvent_disconnected": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "vflux_server_inactive_count": {
+      "type": "GAUGE",
+      "metrics": [
+        {
+          "value": "0"
+        }
+      ]
+    }
+  }
+}
