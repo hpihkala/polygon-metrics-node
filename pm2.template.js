@@ -5,7 +5,7 @@ module.exports = {
 	  args   : "start",
 	  env    : {
 		  "METRICS_PRIVATE_KEY": "",
-		  "VALIDATOR_ETHEREUM_ADDRESS": "",
+		  "VALIDATOR_NAME": "",
 		  "VALIDATOR_HEIMDALL": "http://YOUR-VALIDATOR-IP:26660/metrics",
 		  "VALIDATOR_BOR": "http://YOUR-VALIDATOR-IP:7071/debug/metrics/prometheus",
 		  "SENTRY_HEIMDALL": "http://YOUR-SENTRY-IP:26660/metrics",
