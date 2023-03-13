@@ -6,7 +6,7 @@ import { MetricsMessage, Measurable, ParsedPrometheusMessage } from './types/Mes
 import { Config } from './types/ConfigTypes'
 
 // Check required env variables
-const requiredEnvs = ['METRICS_PRIVATE_KEY', 'VALIDATOR_ETHEREUM_ADDRESS']
+const requiredEnvs = ['METRICS_PRIVATE_KEY', 'VALIDATOR_NAME']
 if (requiredEnvs.find(envName => process.env[envName] == null)) {
 	console.error(`Error: The following env variables are required: \n${requiredEnvs.join('\n')}`)
 	process.exit(1)
@@ -82,7 +82,7 @@ const streamr = new StreamrClient({
 
 					const message: MetricsMessage = {
 						version: 1,
-						validator: process.env.VALIDATOR_ETHEREUM_ADDRESS || 'undefined',
+						validator: process.env.VALIDATOR_NAME || 'unknown',
 						metrics: {}
 					}
 					parsedPrometheusFormat.forEach((prometheusEntry) => {

@@ -39,7 +39,7 @@ The Metrics node is configured via environment variables, some of which are requ
 You **must** pass all of the following environment variables:
 
 - `METRICS_PRIVATE_KEY` - Your Metrics private key. The corresponding address must be whitelisted to publish on the metrics streams.
-- `VALIDATOR_ETHEREUM_ADDRESS` - Your Signer address as shown in the [Polygon Staking UI](https://staking.polygon.technology/validators/146)
+- `VALIDATOR_NAME` - The name of your validator node as shown in the [Polygon Staking UI](https://staking.polygon.technology)
 
 Additionally, you **must** pass **one or more** of the following. Only the endpoints you specify will be read, and the others will be skipped.
 
