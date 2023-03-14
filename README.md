@@ -8,29 +8,46 @@ The Metrics node periodically calls those endpoints, formats the metrics to a mo
 
 The idea of the Metrics node is introduced in this [Polygon governance proposal draft](https://forum.polygon.technology/t/proposal-decentralized-sharing-of-validator-health-metrics/11454/6).
 
-## Subscribing to the data
-
-The data is being published to the following four stream ids, one per each node type:
-
-- `polygon-validators.eth/validator/bor` ([preview in browser](https://streamr.network/core/streams/polygon-validators.eth%2Fvalidator%2Fbor/preview))
-- `polygon-validators.eth/validator/heimdall` ([preview in browser](https://streamr.network/core/streams/polygon-validators.eth%2Fvalidator%2Fheimdall/preview))
-- `polygon-validators.eth/sentry/bor` ([preview in browser](https://streamr.network/core/streams/polygon-validators.eth%2Fsentry%2Fbor/preview))
-- `polygon-validators.eth/sentry/heimdall` ([preview in browser](https://streamr.network/core/streams/polygon-validators.eth%2Fsentry%2Fheimdall/preview))
-
-Builders seeking to use the data can easily subscribe to the above streams using one of the following:
-- [JS client library](https://www.npmjs.com/package/streamr-client)
-- [Broker node](https://docs.streamr.network/node-runners/run-a-node)
-- [Command-line interface (CLI)](https://docs.streamr.network/usage/cli-tool/)
-
-Example using the CLI tool:
-
-```
-streamr stream subscribe polygon-validators.eth/sentry/heimdall
-```
-
 ## Installing the Metrics node
 
-TODO
+The Metrics node is available as a [Docker image](https://hub.docker.com/r/hpihkala/polygon-metrics-node) to make it easy to download and run regardless of platform, or to plug into orchestration frameworks like Kubernetes. These step-by-step instructions are for trying out the image using the `docker` command line tool, but if you use Kubernetes or a hosted cloud platform for Docker containers, then please refer to their respective documentation on how to run Docker containers.
+
+1. Create a new Ethereum address and private key using your wallet/tool of choice ([MetaMask](https://metamask.io/), [Vanity address generator](https://vanity-eth.tk/), etc.)
+1. [Install Docker](https://docs.docker.com/get-docker/) if you don't have it
+1. Use the `docker` command-line tool to download and start the image:
+
+```
+docker run hpihkala/polygon-metrics-node
+```
+
+The above command should try to start it, and exit with the following error:
+
+```
+Error: The following env variables are required: 
+METRICS_PRIVATE_KEY
+VALIDATOR_NAME
+```
+
+That's a very good sign! The program started successfully but quit because you didn't supply any configuration via environment variables. 
+
+For the list of env variables to use, see the next section. Your eventual command to start the container in detached mode (`-d`), complete with the env config (`--env VARIABLE=VALUE`), will look roughly like this:
+
+```
+docker run -d \ 
+--env METRICS_PRIVATE_KEY=... \
+--env VALIDATOR_NAME=... \
+--env VALIDATOR_HEIMDALL=http://...:26660/metrics \ 
+--env VALIDATOR_BOR=http://...:7071/debug/metrics/prometheus \
+--env SENTRY_HEIMDALL=http://...:26660/metrics \
+--env SENTRY_BOR=http://...:7071/debug/metrics/prometheus \
+hpihkala/polygon-metrics-node
+```
+
+In the firewall on your validator and sentry machines, remember to allow access from the Metrics node to the relevant ports (by default 26660 and 7071). Otherwise the Metrics node will not be able to read the Metrics from your Heimdall and Bor nodes, and will print errors to the console log.
+
+To view the log for troubleshooting, use `docker ps` to find the ID of the container, and then `docker logs -f [ID]` to see the logs.
+
+For further information about running, stopping, and updating containers see the [Docker docs](https://docs.docker.com/language/nodejs/run-containers/).
 
 ## Configuring the Metrics node
 
@@ -52,6 +69,26 @@ Optional configuration and corresponding default values:
 
 - `POLL_INTERVAL_SECONDS` - How often to read and publish the metrics, in seconds. Default: `60` seconds
 - `REQUEST_TIMEOUT_SECONDS` - How soon to timeout if the endpoint doesn't respond. Default: `10` seconds
+
+## Subscribing to the data
+
+The data is being published to the following four stream ids, one per each node type:
+
+- `polygon-validators.eth/validator/bor` ([preview in browser](https://streamr.network/core/streams/polygon-validators.eth%2Fvalidator%2Fbor/preview))
+- `polygon-validators.eth/validator/heimdall` ([preview in browser](https://streamr.network/core/streams/polygon-validators.eth%2Fvalidator%2Fheimdall/preview))
+- `polygon-validators.eth/sentry/bor` ([preview in browser](https://streamr.network/core/streams/polygon-validators.eth%2Fsentry%2Fbor/preview))
+- `polygon-validators.eth/sentry/heimdall` ([preview in browser](https://streamr.network/core/streams/polygon-validators.eth%2Fsentry%2Fheimdall/preview))
+
+Builders seeking to use the data can easily subscribe to the above streams using one of the following:
+- [JS client library](https://www.npmjs.com/package/streamr-client)
+- [Broker node](https://docs.streamr.network/node-runners/run-a-node)
+- [Command-line interface (CLI)](https://docs.streamr.network/usage/cli-tool/)
+
+Example using the CLI tool:
+
+```
+streamr stream subscribe polygon-validators.eth/sentry/heimdall
+```
 
 ## Data format and content
 
