@@ -13,6 +13,7 @@ The idea of the Metrics node is introduced in this [Polygon governance proposal 
 The Metrics node is available as a [Docker image](https://hub.docker.com/r/hpihkala/polygon-metrics-node) to make it easy to download and run regardless of platform, or to plug into orchestration frameworks like Kubernetes. These step-by-step instructions are for trying out the image using the `docker` command line tool, but if you use Kubernetes or a hosted cloud platform for Docker containers, then please refer to their respective documentation on how to run Docker containers.
 
 1. Create a new Ethereum address and private key using your wallet/tool of choice ([MetaMask](https://metamask.io/), [Vanity address generator](https://vanity-eth.tk/), etc.)
+1. Send the above Ethereum address to whoever manages the publish permissions on the stream (currently just tag `@henri#1016` on `#pos-discussion` on Polygon Discord)
 1. [Install Docker](https://docs.docker.com/get-docker/) if you don't have it
 1. Use the `docker` command-line tool to download and start the image:
 
