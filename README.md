@@ -12,7 +12,7 @@ The idea of the Metrics node is introduced in this [Polygon governance proposal 
 
 The Metrics node is available as a [Docker image](https://hub.docker.com/r/hpihkala/polygon-metrics-node) to make it easy to download and run regardless of platform, or to plug into orchestration frameworks like Kubernetes. These step-by-step instructions are for trying out the image using the `docker` command line tool, but if you use Kubernetes or a hosted cloud platform for Docker containers, then please refer to their respective documentation on how to run Docker containers.
 
-1. Check that the Prometheus API is enabled on both Bor and Heimdall:
+1. Check that the Prometheus API is enabled on both Bor and Heimdall, on both Validator and Sentry machines:
 	- Heimdall: in your `config.toml` (usually located at `/var/lib/heimdall/config/config.toml`), you need to have `prometheus = true`. (See [Polygon docs](https://wiki.polygon.technology/docs/maintain/validate/run-validator-ansible/#configure-the-heimdall-service-1))
 	- Bor: it's on by default, but you can check your `config.toml` (usually located at `/var/lib/bor/config.toml`) in which you need to have [this](https://github.com/maticnetwork/launch/blob/master/mainnet-v1/sentry/sentry/bor/config.toml#L95-L96).
 1. Create a new Ethereum address and private key using your wallet/tool of choice ([MetaMask](https://metamask.io/), [Vanity address generator](https://vanity-eth.tk/), etc.)
