@@ -1,4 +1,4 @@
-import { StreamrClient } from 'streamr-client'
+import { StreamPermission, StreamrClient } from 'streamr-client'
 import axios from 'axios'
 import parsePrometheusTextFormat from 'parse-prometheus-text-format'
 
@@ -32,16 +32,6 @@ const config: Config = {
 	},
 }
 
-// Print the active config to console to help spot any mistakes
-Object.keys(config).forEach(configName => {
-	const { url, streamId } = config[configName]
-	if (url && streamId) {
-		console.log(`[OK] ${configName} - URL: ${url}, streamId: ${streamId}`)
-	} else {
-		console.log(`[SKIPPING!] ${configName} - URL: ${url}, streamId: ${streamId}`)
-	}
-})
-
 // If none of the endpoints are configured, error and stop
 if (!Object.keys(config).find(configName => config[configName].url && config[configName].streamId)) {
 	console.error(`Error: No endpoints configured! Please give the URLs to the Prometheus ports of your nodes in one or more of the following env variables: VALIDATOR_BOR, VALIDATOR_HEIMDALL, SENTRY_BOR, SENTRY_HEIMDALL`)
@@ -58,59 +48,99 @@ const streamr = new StreamrClient({
 	}
 })
 
+function log(obj: any, fn: (m: any) => void = console.log) {
+	fn(`${new Date().toISOString()} - ${obj}`)
+}
+
+async function getPrometheusMetrics(url: string): Promise<ParsedPrometheusMessage[]> {
+	// Fetch from the Prometheus endpoint			
+	const response = await axios.get(url, {
+		timeout: requestTimeoutSeconds * 1000,
+	})
+
+	// Parse the Prometheus text format to an object format
+	return parsePrometheusTextFormat(response.data)
+}
+
+async function poll() {
+	// Poll metrics data from each of the configured endpoints
+	Object.keys(config).forEach(async (configName) => {
+		try {
+			const { url, streamId } = config[configName]
+			if (url && streamId) {
+				// Fetch the metrics data from the node
+				const parsedPrometheusFormat = await getPrometheusMetrics(url)
+
+				// Transform it a bit
+				const message: MetricsMessage = {
+					version: 1,
+					validator: process.env.VALIDATOR_NAME || 'unknown',
+					metrics: {}
+				}
+				parsedPrometheusFormat.forEach((prometheusEntry) => {
+					const measurable: Measurable = {
+						type: prometheusEntry.type,
+						metrics: prometheusEntry.metrics,
+						help: prometheusEntry.help
+					}
+					
+					// Don't include empty help messages
+					if (measurable.help === '') {
+						delete measurable.help
+					}
+
+					message.metrics[prometheusEntry.name] = measurable
+				})
+
+				// Publish to the stream
+				await streamr.publish(streamId, message)
+				log(`${configName}: Success`)
+			}
+		} catch (err) {
+			log(`${err}`)
+		}
+	})
+}
+
 ;(async () => {
 	// For good measure, print the address for the configured private key
 	const address = await streamr.getAddress()
-	console.log(`Metrics node configured with address: ${address}`)
-	console.log(`Poll interval is ${pollIntervalSeconds} seconds`)
-	console.log(`Request timeout is ${requestTimeoutSeconds} seconds`)
+	log(`Metrics node configured with address: ${address}`)
+	log(`Poll interval is ${pollIntervalSeconds} seconds`)
+	log(`Request timeout is ${requestTimeoutSeconds} seconds\n`)
 
-	const poll = async () => {
-		// Poll metrics data from each of the configured endpoints
-		Object.keys(config).forEach(async (configName) => {
-			try {
-				const { url, streamId } = config[configName]
-				if (url && streamId) {
-					// Fetch from the Prometheus endpoint
-					console.log(`${configName}: Fetching from ${url}`)					
-					const response = await axios.get(url, {
-						timeout: requestTimeoutSeconds * 1000,
-					})
+	// Check config before we start
+	for (const configName of Object.keys(config)) {
+		const { streamId, url } = config[configName]
 
-					// Parse the Prometheus text format to an object format
-					const parsedPrometheusFormat: ParsedPrometheusMessage[] = parsePrometheusTextFormat(response.data)
-
-					const message: MetricsMessage = {
-						version: 1,
-						validator: process.env.VALIDATOR_NAME || 'unknown',
-						metrics: {}
-					}
-					parsedPrometheusFormat.forEach((prometheusEntry) => {
-						const measurable: Measurable = {
-							type: prometheusEntry.type,
-							metrics: prometheusEntry.metrics,
-							help: prometheusEntry.help
-						}
-						
-						// Don't include empty help messages
-						if (measurable.help === '') {
-							delete measurable.help
-						}
-
-						message.metrics[prometheusEntry.name] = measurable
-					})
-
-					console.log(`${configName}: Publishing to ${streamId}`)
-					// console.log(JSON.stringify(message, null, 2))
-					await streamr.publish(streamId, message)
-				}
-			} catch (err) {
-				console.log(err)
-			}
+		// Check stream permissions
+		log(`${configName}: Checking that address ${address} has permission to publish to ${streamId}`)
+		const stream = await streamr.getStream(streamId)
+		const streamPermissionOk = await stream.hasPermission({
+			user: address,
+			permission: StreamPermission.PUBLISH,
+			allowPublic: false,
 		})
+
+		if (!streamPermissionOk) {
+			throw new Error(`Your address ${address} does not have permission to publish to ${streamId}!`)
+		}
+
+		// Check Prometheus API endpoint
+		if (url) {
+			log(`${configName}: Checking that Prometheus API is accessible at ${url}`)
+			try { 
+				await getPrometheusMetrics(url)
+			} catch (err) {
+				throw new Error(`Couldn't successfully retrieve metrics for ${configName} from ${url}. Error was: ${err}`)
+			}
+		} else {
+			log(`WARN: Skipping ${configName} because the Prometheus API URL is not configured. Your Metrics node is publishing only part of the metrics.`)
+		}
 	}
 
-	// Set the timer and also poll immediately on start
+	// Start the timer and also poll immediately on start
+	log(`Everything seems fine! Starting the metrics polling.\n`)
 	poll()
 	setInterval(poll, pollIntervalSeconds * 1000)
 })()
