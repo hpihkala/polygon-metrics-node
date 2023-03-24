@@ -139,8 +139,14 @@ async function poll() {
 		}
 	}
 
-	// Start the timer and also poll immediately on start
-	log(`Everything seems fine! Starting the metrics polling.\n`)
-	poll()
-	setInterval(poll, pollIntervalSeconds * 1000)
+	log(`Everything seems fine!`)
+
+	if (process.argv.find(arg => arg === '--test-config')) {
+		process.exit(0)
+	} else {
+		// Start the timer and also poll immediately on start
+		log(`Starting the metrics polling.\n`)
+		poll()
+		setInterval(poll, pollIntervalSeconds * 1000)
+	}
 })()

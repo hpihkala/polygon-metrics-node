@@ -2,7 +2,9 @@
    
 FROM node:18-bullseye
 WORKDIR /polygon-metrics-node
+COPY ./validator-node.sh ./
+RUN chmod 755 ./validator-node.sh
 COPY package*.json ./
 COPY build/* ./
 RUN npm ci
-CMD ["node", "index.js"]
+ENTRYPOINT ["./validator-node.sh"]

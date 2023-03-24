@@ -1,6 +1,7 @@
 {
   "scripts": {
     "start": "ts-node src/index.ts",
+	"test-config": "ts-node src/index.ts --test-config",
     "build": "tsc --build",
     "clean": "tsc --build --clean",
 	"docker-build-local-platform": "npm run build && docker build -t hpihkala/polygon-metrics-node .",

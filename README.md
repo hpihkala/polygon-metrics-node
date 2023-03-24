@@ -15,8 +15,9 @@ The Metrics node is available as a [Docker image](https://hub.docker.com/r/hpihk
 1. Check that the Prometheus API is enabled on both Bor and Heimdall, on both Validator and Sentry machines:
 	- Heimdall: in your `config.toml` (usually located at `/var/lib/heimdall/config/config.toml`), you need to have `prometheus = true`. (See [Polygon docs](https://wiki.polygon.technology/docs/maintain/validate/run-validator-ansible/#configure-the-heimdall-service-1))
 	- Bor: it's on by default, but you can check your `config.toml` (usually located at `/var/lib/bor/config.toml`) in which you need to have [this](https://github.com/maticnetwork/launch/blob/master/mainnet-v1/sentry/sentry/bor/config.toml#L95-L96).
+1. Configure the firewall on Validator and Sentry machines to accept connections to ports `26660` and `7071` from the Metrics node machine
 1. Create a new Ethereum address and private key using your wallet/tool of choice ([MetaMask](https://metamask.io/), [Vanity address generator](https://vanity-eth.tk/), etc.)
-1. Send the above Ethereum address (NOT the private key!) to whoever manages the Metrics network (currently ping `@henri#1016` on `#pos-discussion` on Polygon Discord)
+1. Send the above Ethereum address (NOT the private key!) to the onboarding person for the Metrics network (currently ping `@henri#1016` on `#pos-discussion` on Polygon Discord)
 1. [Install Docker](https://docs.docker.com/get-docker/) if you don't have it
 1. Use the `docker` command-line tool to download and start the image:
 
@@ -32,52 +33,77 @@ METRICS_PRIVATE_KEY
 VALIDATOR_NAME
 ```
 
-That's a very good sign! The program started successfully but quit because you didn't supply any configuration via environment variables. 
+That's a very good sign! The program started successfully but quit because you didn't supply any configuration via environment variables. Let's do that now!
 
-For the list of env variables to use, see the next section. Your eventual command to start the container in detached mode (`-d`), complete with the env config (`--env VARIABLE=VALUE`), will look roughly like this:
+- Create a file called `env.list`
+- Paste the following template into that file and fill the values according to your setup, replacing the "XXX" with your actual values:
 
 ```
-docker run -d \ 
---env METRICS_PRIVATE_KEY=... \
---env VALIDATOR_NAME=... \
---env VALIDATOR_HEIMDALL=http://...:26660/metrics \ 
---env VALIDATOR_BOR=http://...:7071/debug/metrics/prometheus \
---env SENTRY_HEIMDALL=http://...:26660/metrics \
---env SENTRY_BOR=http://...:7071/debug/metrics/prometheus \
-hpihkala/polygon-metrics-node
+# Your Metrics private key. The corresponding address must be whitelisted to publish on the metrics streams.
+METRICS_PRIVATE_KEY=XXX
+
+# The name of your validator node as shown in the Polygon Staking UI: https://staking.polygon.technology
+VALIDATOR_NAME=XXX
+
+# URL to the Prometheus endpoint on your Validator Heimdall
+VALIDATOR_HEIMDALL=http://XXX:26660/metrics
+
+# URL to the Prometheus endpoint on your Validator Bor
+VALIDATOR_BOR=http://XXX:7071/debug/metrics/prometheus
+
+# URL to the Prometheus endpoint on your Validator Heimdall
+SENTRY_HEIMDALL=http://XXX:26660/metrics
+
+# URL to the Prometheus endpoint on your Validator Bor
+SENTRY_BOR=http://XXX:7071/debug/metrics/prometheus
+
+# Optional: How often to read and publish the metrics, in seconds. Default: `60` seconds
+# POLL_INTERVAL_SECONDS=60
+
+# Optional: How soon to timeout if the endpoint doesn't respond. Default: `10` seconds
+# REQUEST_TIMEOUT_SECONDS=10
 ```
 
-In the firewall on your validator and sentry machines, remember to allow access from the Metrics node to the relevant ports (by default 26660 and 7071). Otherwise the Metrics node will not be able to read the Metrics from your Heimdall and Bor nodes, and will print errors to the console log.
+- Save your changes to the file.
+- Test your config with:
+
+```
+docker run --env-file env.list hpihkala/polygon-metrics-node --test-config
+```
+
+- If there's an error, see the [Troubleshooting](#troubleshooting) section below for help.
+- If the above run ends successfully with `Everything seems fine!`, you're good to go. Start the Metrics node in the background (`-d`) with:
+
+```
+docker run -d --env-file env.list hpihkala/polygon-metrics-node
+```
 
 To view the log for troubleshooting, use `docker ps` to find the ID of the container, and then `docker logs -f [ID]` to see the logs.
 
 For further information about running, stopping, and updating containers see the [Docker docs](https://docs.docker.com/language/nodejs/run-containers/).
 
-## Configuring the Metrics node
+## Updating the Metrics node image
 
-The Metrics node is configured via environment variables, some of which are required and some are optional.
-
-You **must** pass all of the following environment variables:
-
-- `METRICS_PRIVATE_KEY` - Your Metrics private key. The corresponding address must be whitelisted to publish on the metrics streams.
-- `VALIDATOR_NAME` - The name of your validator node as shown in the [Polygon Staking UI](https://staking.polygon.technology)
-
-Additionally, you **must** pass **one or more** of the following. Only the endpoints you specify will be read, and the others will be skipped.
-
-- `VALIDATOR_BOR` - URL to the Prometheus port on your Validator Bor. By default `http://VALIDATOR-IP-ADDRESS:7071/debug/metrics/prometheus`
-- `VALIDATOR_HEIMDALL` - URL to the Prometheus port on your Validator Heimdall. By default `http://VALIDATOR-IP-ADDRESS:26660/metrics`
-- `SENTRY_BOR` - URL to the Prometheus port on your Sentry Bor. By default `http://SENTRY-IP-ADDRESS:7071/debug/metrics/prometheus`
-- `SENTRY_HEIMDALL` - URL to the Prometheus port on your Validator Heimdall. By default `http://SENTRY-IP-ADDRESS:26660/metrics`
-
-Optional configuration and corresponding default values:
-
-- `POLL_INTERVAL_SECONDS` - How often to read and publish the metrics, in seconds. Default: `60` seconds
-- `REQUEST_TIMEOUT_SECONDS` - How soon to timeout if the endpoint doesn't respond. Default: `10` seconds
+- Pull the newest image with `docker pull hpihkala/polygon-metrics-node`
+- Use `docker ps` to find the ID of the currently running container
+- `docker kill [ID]`
+- Restart using the usual start command `docker run -d --env-file env.list hpihkala/polygon-metrics-node`
 
 ## Troubleshooting
 
-- Check that the Prometheus metrics API is enabled on Bor and Heimdall on both Validator and Sentry machines (see installation instructions above)
-- Check your firewall on Validator and Sentry: the Prometheus metrics API ports (by default `26660` and `7071`) must be allowed from the Metrics machine
+```
+Error: Your address 0x... does not have permission to publish to polygon-validators.eth/...!
+```
+
+- Get in touch with the onboarding person for the Metrics network (currently ping `@henri#1016` on `#pos-discussion` on Polygon Discord)
+
+```
+Error: Couldn't successfully retrieve metrics for [node] from [url].
+```
+
+- Check that the given URL points to the right machine
+- Check your firewall settings on that machine: the Prometheus metrics API ports (by default `26660` and `7071`) must be allowed from the Metrics machine
+- Check that the Prometheus metrics API is enabled on Bor and Heimdall (see the first step in the installation instructions above)
 
 ## Subscribing to the data
 
