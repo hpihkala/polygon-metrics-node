@@ -8,6 +8,7 @@ export interface Measurable {
 	help?: string
 	type: MetricType
 	metrics: any[]
+	error?: string
 }
 
 enum MetricType {

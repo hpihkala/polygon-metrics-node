@@ -89,6 +89,14 @@ async function poll() {
 						delete measurable.help
 					}
 
+					// Don't include very large metrics
+					const sizeLimit = (process.env.MAX_METRICS_LENGTH ? parseInt(process.env.MAX_METRICS_LENGTH) : 100)
+					if (measurable.metrics.length >= sizeLimit) {
+						measurable.error = `Metric omitted due to size: ${measurable.metrics.length}, limit: ${100}`
+						log(`Metric ${prometheusEntry.name} omitted due to size: ${measurable.metrics.length}, limit: ${100}`)
+						measurable.metrics = []
+					}
+
 					message.metrics[prometheusEntry.name] = measurable
 				})
 
