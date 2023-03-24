@@ -72,10 +72,10 @@ docker run --env-file env.list hpihkala/polygon-metrics-node --test-config
 ```
 
 - If there's an error, see the [Troubleshooting](#troubleshooting) section below for help.
-- If the above run ends successfully with `Everything seems fine!`, you're good to go. Start the Metrics node in the background (`-d`) with:
+- If the above run ends successfully with `Everything seems fine!`, you're good to go. Start the Metrics node in the background (`-d`) and configure it to start on reboot (`--restart unless-stopped`) with:
 
 ```
-docker run -d --env-file env.list hpihkala/polygon-metrics-node
+docker run -d --restart unless-stopped --env-file env.list hpihkala/polygon-metrics-node
 ```
 
 To view the log for troubleshooting, use `docker ps` to find the ID of the container, and then `docker logs -f [ID]` to see the logs.
@@ -86,8 +86,9 @@ For further information about running, stopping, and updating containers see the
 
 - Pull the newest image with `docker pull hpihkala/polygon-metrics-node`
 - Use `docker ps` to find the ID of the currently running container
-- `docker kill [ID]`
-- Restart using the usual start command `docker run -d --env-file env.list hpihkala/polygon-metrics-node`
+- `docker stop [ID]`
+- `docker rm [ID]`
+- Restart using the usual start command `docker run -d --restart unless-stopped --env-file env.list hpihkala/polygon-metrics-node`
 
 ## Troubleshooting
 
