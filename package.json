@@ -1,16 +1,16 @@
 {
   "scripts": {
     "start": "ts-node src/index.ts",
-	"test-config": "ts-node src/index.ts --test-config",
+    "test-config": "ts-node src/index.ts --test-config",
     "build": "tsc --build",
     "clean": "tsc --build --clean",
-	"docker-build-local-platform": "npm run build && docker build -t hpihkala/polygon-metrics-node .",
-	"docker-push-cross-platform": "npm run build && docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t hpihkala/polygon-metrics-node:latest --push ."
+    "docker-build-local-platform": "npm run build && docker build -t hpihkala/polygon-metrics-node .",
+    "docker-push-cross-platform": "npm run build && docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t hpihkala/polygon-metrics-node:latest --push ."
   },
   "dependencies": {
     "axios": "^1.3.4",
     "parse-prometheus-text-format": "^1.1.1",
-    "streamr-client": "^7.3.0"
+    "streamr-client": "^8.2.1"
   },
   "devDependencies": {
     "@types/node-fetch": "^2.6.2",
