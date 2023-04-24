@@ -52,10 +52,18 @@ VALIDATOR_HEIMDALL=http://XXX:26660/metrics
 VALIDATOR_BOR=http://XXX:7071/debug/metrics/prometheus
 
 # URL to the Prometheus endpoint on your Validator Heimdall
+# If you run multiple sentry nodes, you can give several URLs separated by commas
 SENTRY_HEIMDALL=http://XXX:26660/metrics
 
 # URL to the Prometheus endpoint on your Validator Bor
+# If you run multiple sentry nodes, you can give several URLs separated by commas
 SENTRY_BOR=http://XXX:7071/debug/metrics/prometheus
+
+# Optional: You can give custom names to your multiple sentry nodes, separated by commas.
+# These correspond to the URLs passed and the number of entries must be the same.
+# If not given and there are multiple URLs configured, the VALIDATOR_NAME will be used with "-1", "-2", etc. appended.
+# SENTRY_BOR_NAMES=MyFirstName,MySecondName
+# SENTRY_HEIMDALL_NAMES=MyFirstName,MySecondName
 
 # Optional: How often to read and publish the metrics, in seconds. Default: `60` seconds
 # POLL_INTERVAL_SECONDS=60
@@ -105,6 +113,12 @@ Error: Couldn't successfully retrieve metrics for [node] from [url].
 - Check that the given URL points to the right machine
 - Check your firewall settings on that machine: the Prometheus metrics API ports (by default `26660` and `7071`) must be allowed from the Metrics machine
 - Check that the Prometheus metrics API is enabled on Bor and Heimdall (see the first step in the installation instructions above)
+
+```
+Error: Number of Sentry Bor URLs doesn't match the number of names!
+```
+
+- Check that you pass in the correct number of explicit node names. For example, if you pass in 3 URLs in `SENTRY_BOR` and want to assign custom names for them, you need to pass in 3 names in `SENTRY_BOR_NAMES`.
 
 ## Subscribing to the data
 
